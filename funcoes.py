@@ -27,4 +27,5 @@ def remover_dado (dados_rolados,dados_guardados,numero_inteiro):
             dados_rolados.append(dados_guardados[i])
         else:
             nova_lista.append(dados_guardados[i])
+        i +=1
     return [dados_rolados,nova_lista]
