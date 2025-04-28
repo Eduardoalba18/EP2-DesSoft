@@ -17,4 +17,4 @@ def guardar_dado(lista_dados, dados_guardados, numero_inteiro):
         else:
             dados_guardados.append(lista_dados[i]) 
         i +=1             
-    return [lista_dados, dados_guardados] 
+    return [nova_lista, dados_guardados] 
