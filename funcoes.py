@@ -29,3 +29,13 @@ def remover_dado (dados_rolados,dados_no_estoque,dado_para_remover):
             lista.append(dados_no_estoque[i])
         i +=1 
     return [dados_rolados, lista]
+
+def calcula_pontos_regra_simples (lista_numeros_int):
+    dicio = {}
+    for numero in range (1,7):
+        soma = 0 
+        for dado in lista_numeros_int:
+            if dado == numero:
+                soma+= soma + numero
+        resultado[numero]=soma
+    return resultado
