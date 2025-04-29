@@ -47,3 +47,18 @@ def calcula_pontos_soma (lista_numeros):
         soma += lista_numeros[i]
         i += 1
     return soma
+
+def calcula_pontos_sequencia_baixa (lista_numeros):
+    soma = 0
+    lista = []
+    i = 0
+    while i < len(lista_numeros):
+        if lista_numeros[i] not in lista:
+            lista.append(lista_numeros[i])
+            soma += i
+        i += 1
+    if soma == 4:
+        return 15
+    else:
+        return 0 
+    
