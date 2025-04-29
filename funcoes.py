@@ -19,13 +19,13 @@ def guardar_dado(lista_dados, dados_guardados, numero_inteiro):
         i +=1             
     return [nova_lista, dados_guardados] 
 
-def remover_dado (dados_rolados,dados_guardados,numero_inteiro):
-    nova_lista = []
-    i = 0 
-    while i < len(dados_guardados):
-        if dados_guardados[i]==numero_inteiro:
-            dados_rolados.append(dados_guardados[i])
+def remover_dado (dados_rolados,dados_no_estoque,dado_para_remover):
+    lista = []
+    i = 0
+    while i < len(dados_no_estoque):
+        if i == dado_para_remover:
+            dados_rolados.append(dados_no_estoque[i])
         else:
-            nova_lista.append(dados_guardados[i])
-        i +=1
-    return [dados_rolados,nova_lista]
+            lista.append(dados_no_estoque[i])
+        i +=1 
+    return [dados_rolados, lista]
