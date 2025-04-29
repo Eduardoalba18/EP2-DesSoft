@@ -90,8 +90,8 @@ def calcula_pontos_quadra (lista_numeros):
             dicio[numero]=1
     if 4 in dicio.values():
         soma = 0
-        for numero,quantidade in dicio.items():
-            soma += (numero*dicio[numero])
+        for numero in lista_numeros:
+            soma += numero
         return soma       
     else:
         return 0  
