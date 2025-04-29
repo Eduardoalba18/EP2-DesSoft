@@ -94,5 +94,5 @@ def calcula_pontos_quadra (lista_numeros):
             for numero in lista_numeros:
                 soma += numero
             return soma   
-        else:
-            return 0  
+        
+     return 0  
