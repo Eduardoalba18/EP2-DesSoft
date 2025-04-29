@@ -75,7 +75,7 @@ def calcula_pontos_full_house (lista_numeros):
             dicio[numero]=1
     valor1 = 3
     valor2 = 2
-    if valor1 and valor2 in dicio:
+    if valor1 in dicio.values() and valor2 in dicio.values():
         soma = 0
         for numero,quantidade in dicio.items():
             soma += dicio[numero]
