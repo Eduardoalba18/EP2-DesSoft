@@ -57,7 +57,7 @@ def calcula_pontos_sequencia_baixa (lista_numeros):
             lista.append(lista_numeros[i])
             soma += i
         i += 1
-    if soma == 4:
+    if soma % 4==0:
         return 15
     else:
         return 0 
