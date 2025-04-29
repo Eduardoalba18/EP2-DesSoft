@@ -104,6 +104,6 @@ def calcula_pontos_quina (lista_numeros):
         else:
             dicio[numero]=1
     for quantidade in dicio.values():
-        if quantidade >= 4:
+        if quantidade >= 5:
             return 50   
     return 0     
