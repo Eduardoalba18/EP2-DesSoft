@@ -94,4 +94,19 @@ def calcula_pontos_quadra (lista_numeros):
             for numero in lista_numeros:
                 soma += numero
             return soma   
-    return 0  
+    return 0 
+
+def calcula_pontos_quina (lista_numeros):
+    dicio = {}
+    for numero in lista_numeros:
+        if numero in dicio:
+            dicio[numero]+= 1
+        else:
+            dicio[numero]=1
+    if 5 in dicio.values():
+        soma = 0
+        for numero,quantidade in dicio.items():
+            soma += (numero*dicio[numero])
+        return soma       
+    else:
+        return 0     
