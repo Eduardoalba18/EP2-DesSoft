@@ -88,10 +88,11 @@ def calcula_pontos_quadra (lista_numeros):
             dicio[numero]+= 1
         else:
             dicio[numero]=1
-    if 4 in dicio.values():
-        soma = 0
-        for numero in lista_numeros:
-            soma += numero
-        return soma       
-    else:
-        return 0  
+    if quantidade in dicio.values():
+        if quantidade >= 4:    
+            soma = 0
+            for numero in lista_numeros:
+                soma += numero
+            return soma       
+        else:
+            return 0  
