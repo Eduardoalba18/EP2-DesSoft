@@ -37,5 +37,5 @@ def calcula_pontos_regra_simples (lista_numeros_int):
         for dado in lista_numeros_int:
             if dado == numero:
                 soma+= soma + numero
-        resultado[numero]=soma
-    return resultado
+        dicio[numero]=soma
+    return dicio
