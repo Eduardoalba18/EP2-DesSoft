@@ -39,3 +39,11 @@ def calcula_pontos_regra_simples (lista_numeros_int):
                 soma+= numero
         dicio[numero]=soma
     return dicio
+
+def calcula_pontos_soma (lista_numeros):
+    i = 0
+    soma = 0
+    while i < len(lista_numeros):
+        soma += lista_numeros[i]
+        i += 1
+    return soma
