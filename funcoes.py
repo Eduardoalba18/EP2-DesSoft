@@ -80,3 +80,18 @@ def calcula_pontos_full_house (lista_numeros):
         return soma       
     else:
         return 0     
+
+def calcula_pontos_quadra (lista_numeros):
+    dicio = {}
+    for numero in lista_numeros:
+        if numero in dicio:
+            dicio[numero]+= 1
+        else:
+            dicio[numero]=1
+    if 4 in dicio.values():
+        soma = 0
+        for numero,quantidade in dicio.items():
+            soma += (numero*dicio[numero])
+        return soma       
+    else:
+        return 0  
