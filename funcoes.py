@@ -65,3 +65,18 @@ def calcula_pontos_sequencia_alta (lista_numeros):
         return 30 
     else: 
         return 0 
+
+def calcula_pontos_full_house (lista_numeros):
+    dicio = {}
+    for numero in lista_numeros:
+        if numero in dicio:
+            dicio[numero]+= 1
+        else:
+            dicio[numero]=1
+    valor1 = 3
+    valor2 = 2
+    if valor1 and valor2 in dicio:
+        soma = 0
+        for numero,quantidade in dicio.items():
+            soma += dicio[numero]
+    return soma            
