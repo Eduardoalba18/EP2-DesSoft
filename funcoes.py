@@ -104,9 +104,6 @@ def calcula_pontos_quina (lista_numeros):
         else:
             dicio[numero]=1
     if 5 in dicio.values():
-        soma = 0
-        for numero,quantidade in dicio.items():
-            soma += (numero*dicio[numero])
-        return soma       
+        return 50       
     else:
         return 0     
