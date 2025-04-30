@@ -119,3 +119,14 @@ def calcula_pontos_regra_avancada (lista_numeros):
     dicio['sequencia_baixa'] = calcula_pontos_sequencia_baixa (lista_numeros)
 
     return dicio
+
+def faz_jogada (lista_numeros, string, dicio):
+    for numero in [1, 2, 3, 4, 5, 6]:
+        if string == str(numero):
+            if dicio ["regra_simples"][numero]==-1:
+                pontos = calcula_pontos_regra_simples(lista_numeros,numero)
+                dicio["regra_simples"][numero]=pontos
+    if dicio["regra_avancada"][numero]==-1:
+        pontos = calcula_pontos_regra_avancada(lista_numeros,numero)
+        dicio["regra_avancada"][numero]=pontos 
+    return dicio
