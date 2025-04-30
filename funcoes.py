@@ -121,13 +121,15 @@ def calcula_pontos_regra_avancada (lista_numeros):
     return dicio
 
 def faz_jogada (lista_numeros, string,dicio):
-    if string in ["1", "2", "3", "4", "5", "6"]:
-        numero = int(string)
-        if dicio["regra_simples"][numero] == -1:
-            pontos = calcula_pontos_regra_simples(lista_numeros, numero)
-            dicio["regra_simples"][numero] = pontos
-        return dicio
-    if dicio["regra_avancada"][string] == -1:
-        pontos = calcula_pontos_regra_avancada(lista_numeros, string) 
-        dicio["regra_avancada"][string] = pontos 
-        return dicio
+    categorias_avancadas = ['sem_combinacao', 'quadra', 'full_house', 'sequencia_baixa', 'sequencia_alta', 'cinco_iguais']
+    if string in categorias_avancadas:
+        pontos = calcula_pontos_regra_avancada(lista_numeros)
+        dicio["regra_avancada"][string]=pontos[string]
+    else: 
+        pontos = calcula_pontos_regra_simples (lista_numeros)
+        inteiro = int(string)
+        dicio['regra_simples'][inteiro]=pontos[string]
+    return dicio
+
+
+        
