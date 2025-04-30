@@ -128,7 +128,7 @@ def faz_jogada (lista_numeros, string,dicio):
     else: 
         pontos = calcula_pontos_regra_simples (lista_numeros)
         inteiro = int(string)
-        dicio['regra_simples'][inteiro]=pontos[string]
+        dicio['regra_simples'][inteiro]=pontos[inteiro]
     return dicio
 
 
