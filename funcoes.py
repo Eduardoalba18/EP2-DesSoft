@@ -107,3 +107,15 @@ def calcula_pontos_quina (lista_numeros):
         if quantidade >= 5:
             return 50   
     return 0     
+
+def calcula_pontos_regra_avancada (lista_numeros):
+    dicio={}
+    
+    dicio ["cinco_iguais"] = calcula_pontos_quina (lista_numeros)
+    dicio ['full_house'] = calcula_pontos_full_house (lista_numeros)
+    dicio ['quadra']= calcula_pontos_quadra (lista_numeros)
+    dicio ["sem_combinacao"] = calcula_pontos_soma (lista_numeros)
+    dicio ['sequencia_alta'] = calcula_pontos_sequencia_alta (lista_numeros)
+    dicio['sequencia_baixa'] = calcula_pontos_sequencia_baixa (lista_numeros)
+
+    return dicio
