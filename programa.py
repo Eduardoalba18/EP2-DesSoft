@@ -58,4 +58,19 @@ while rodada < 12:
         else:
             print("Opção inválida. Tente novamente.")
 
-    #agora calcular os pontos
+pontos = 0
+for numerp in cartela['regra_simples'].values():
+    if numero != -1:
+        pontos += numero
+
+for numero in cartela['regra_avancada'].values():
+    if numero != -1:
+        pontos += numero
+soma_simples = 0
+for numero in cartela['regra_simples'].values():
+    if numero != -1:
+        soma_simples += numero
+if soma_simples >= 63:
+    pontos += 35 
+imprime_cartela(cartela)
+print("Pontuação total:", pontos)
