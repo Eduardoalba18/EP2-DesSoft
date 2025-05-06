@@ -34,6 +34,13 @@ while rodada < 12:
                 resultado = guardar_dado(rolados,guardados,indice)
                 rolados = resultado[0]
                 guardados = resultado[1]
+        elif escolha == "2":
+            print("Digite o índice do dado a ser removido (0 a 4):")
+            indice = int(input())
+            if 0 <= indice < len(guardados):
+                resultado = remover_dado(rolados, guardados, indice)
+                rolados = resultado[0]
+                guardados = resultado[1]
         elif escolha == "3":
             if rolagem1 < 2:
                 rolagem1 +=1
@@ -46,11 +53,11 @@ while rodada < 12:
             finais = rolados + guardados
             print("Digite a combinação desejada:")
             nivel = input()
-            if nivel in cartela['regra_simples'] and cartela['regra_simples'][int(nivel)] != -1:
+            if nivel.isdigit()and int(nivel) in cartela['regra_simples'] and cartela['regra_simples'][int(nivel)] != -1:
                 print("Essa combinação já foi utilizada.")
             elif nivel in cartela['regra_avancada'] and cartela['regra_avancada'][nivel] != -1:
                 print("Essa combinação já foi utilizada.")
-            elif nivel in cartela['regra_simples'] or nivel in cartela['regra_avancada']:
+            elif (nivel.isdigit() and int(nivel) in cartela['regra_simples']) or nivel in cartela['regra_avancada']:
                 cartela = faz_jogada(finais,nivel,cartela)
                 rodada +=1
                 break
