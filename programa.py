@@ -1,12 +1,12 @@
 from funcoes import *
 cartela = {
-    'regra_simples':  {
-        1:-1,
-        2:-1,
-        3:-1,
-        4:-1,
-        5:-1,
-        6:-1
+    'regra_simples': {
+        1: -1,
+        2: -1,
+        3: -1,
+        4: -1,
+        5: -1,
+        6: -1
     },
     'regra_avancada' : {
         'sem_combinacao':-1,
@@ -53,24 +53,24 @@ while rodada < 12:
             elif nivel in cartela['regra_simples'] or nivel in cartela['regra_avancada']:
                 cartela = faz_jogada(finais,nivel,cartela)
                 rodada +=1
+                break
             else:
                 print("Combinação inválida. Tente novamente.")
         else:
             print("Opção inválida. Tente novamente.")
 
 pontos = 0
-for numerp in cartela['regra_simples'].values():
+for numero in cartela['regra_simples'].values():
     if numero != -1:
         pontos += numero
-
 for numero in cartela['regra_avancada'].values():
     if numero != -1:
         pontos += numero
-soma_simples = 0
+soma = 0
 for numero in cartela['regra_simples'].values():
     if numero != -1:
-        soma_simples += numero
-if soma_simples >= 63:
+        soma += numero
+if soma >= 63:
     pontos += 35 
 imprime_cartela(cartela)
 print("Pontuação total:", pontos)
