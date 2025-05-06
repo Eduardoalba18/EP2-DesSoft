@@ -88,7 +88,7 @@ def turno(cartela, rolados, guardados):
             print("Opção inválida. Tente novamente.")
             acao = input()
     dado = rolados + guardados
-    print("Essa combinação já foi utilizada.")
+    print("Digite a combinação desejada:") 
     categoria1 = input()
     y = categoria(categoria1,cartela)
     while y == 1 or y == 0:
@@ -133,5 +133,3 @@ if pontos_simples >=63:
 
 imprime_cartela(cartela)
 print(f"Pontuação total: {pontos}")
-
-
