@@ -1,15 +1,15 @@
-from funcoes import *
-
-def categoria (combinacao,cartela):
-    if combinacao.isdigit():
-        combinacao = int(combinacao)
-    if combinacao in cartela['regra_simples'] and cartela['regra_simples'][combinacao] != -1:
+def categoria (cat,cartela):
+    num = ['1','2','3','4','5','6']
+    if cat in num:
+        cat = int(cat)
+    if cat in cartela['regra_simples'] and cartela['regra_simples'][cat] != -1:
         return 1
-    elif combinacao in cartela['regra_avancada'] and cartela['regra_avancada'][combinacao] != -1:
+    elif cat in cartela['regra_avancada'] and cartela['regra_avancada'][cat] != -1:
         return 1
-    elif combinacao not in cartela['regra_simples'] and combinacao not in cartela['regra_avancada']:
+    elif cat not in cartela['regra_simples'] and cat not in cartela['regra_avancada']:
         return 0
-    return -1
+
+from funcoes import *
 
 rolados = rolar_dados(5)
 guardados = []
