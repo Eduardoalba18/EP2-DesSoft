@@ -37,7 +37,7 @@ def turno(cartela, rolados, guardados):
     tentativas = 0
     print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
     acao = input()
-    while acao != 0:
+    while acao != "0":
         if acao == "1":
             print("Digite o índice do dado a ser guardado (0 a 4):")
             numero = int(input())
@@ -53,7 +53,7 @@ def turno(cartela, rolados, guardados):
 
         elif acao =='2':
             print("Digite o índice do dado a ser removido (0 a 4):")
-            numero =int(inpu())
+            numero =int(input())
 
             x = remover_dado(rolados,guardados,numero)
             rolados = x[0]
@@ -132,6 +132,6 @@ if pontos_simples >=63:
     pontos+=35
 
 imprime_cartela(cartela)
-print(f"Pontuação total:{pontos}")
+print(f"Pontuação total: {pontos}")
 
 
