@@ -24,7 +24,7 @@ while rodada < 12:
     rolagem1 = 0
     while True:
         print("Dados rolados:", rolados)
-        print("Dados rolados:", guardados)
+        print("Dados guardados:", guardados)
         print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
         escolha = input()
         if escolha == "1":
@@ -35,7 +35,7 @@ while rodada < 12:
                 rolados = resultado[0]
                 guardados = resultado[1]
         elif escolha == "3":
-            if rolagem1 < 1:
+            if rolagem1 < 2:
                 rolagem1 +=1
                 rolados = rolar_dados(len(rolados))
             else:
