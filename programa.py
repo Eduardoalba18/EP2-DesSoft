@@ -46,8 +46,8 @@ def turno(cartela, rolados, guardados):
             rolados = x[0]
             guardados=x[1]
 
-            print(f"Dados rolados:{rolados}")
-            print(f'Dados guardados:{guardados}')
+            print(f"Dados rolados: {rolados}")
+            print(f'Dados guardados: {guardados}')
             print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
             acao = input()
 
@@ -59,8 +59,8 @@ def turno(cartela, rolados, guardados):
             rolados = x[0]
             guardados=x[1]
 
-            print(f"Dados rolados:{rolados}")
-            print(f'Dados guardados:{guardados}')
+            print(f"Dados rolados: {rolados}")
+            print(f'Dados guardados: {guardados}')
             print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
             acao = input()
 
@@ -71,16 +71,16 @@ def turno(cartela, rolados, guardados):
                 rolados = rolar_dados(len(rolados))
                 tentativas+=1
 
-            print(f"Dados rolados:{rolados}")
-            print(f'Dados guardados:{guardados}')
+            print(f"Dados rolados: {rolados}")
+            print(f'Dados guardados: {guardados}')
             print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
             acao = input()
         
         elif acao =='4':
             imprime_cartela(cartela)
 
-            print(f"Dados rolados:{rolados}")
-            print(f'Dados guardados:{guardados}')
+            print(f"Dados rolados: {rolados}")
+            print(f'Dados guardados: {guardados}')
             print("Digite 1 para guardar um dado, 2 para remover um dado, 3 para rerrolar, 4 para ver a cartela ou 0 para marcar a pontuação:")
             acao = input()
 
@@ -106,8 +106,8 @@ def turno(cartela, rolados, guardados):
 rodados = 0
 
 imprime_cartela(cartela)
-print (f"Dados rolados:{rolados}")
-print(f'Dados guardados:{guardados}')
+print (f"Dados rolados: {rolados}")
+print(f'Dados guardados: {guardados}')
 
 while rodados < 12:
     cartela = turno (cartela,rolados,guardados)
@@ -115,8 +115,8 @@ while rodados < 12:
     guardados=[]
 
     if rodados != 11:
-        print (f"Dados rolados:{rolados}")
-        print(f'Dados guardados:{guardados}')
+        print (f"Dados rolados: {rolados}")
+        print(f'Dados guardados: {guardados}')
     
     rodados +=1
 
